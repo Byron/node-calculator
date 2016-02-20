@@ -1,0 +1,17 @@
+#!/usr/bin/env node
+calc = require('../index.js');
+
+function parse(args) {
+  return calc.parseArguments(args, calc.stringToNumber);
+}
+function compute(args) {
+  return calc.calculate.apply(null, args);
+}
+
+process.exit(
+  calc.main(process.argv,
+            parse,
+            compute, 
+            process.stderr,
+            process.stdout)
+);
