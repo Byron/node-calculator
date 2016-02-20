@@ -3,6 +3,8 @@ function calculate(arg1, op, arg2) {
     return arg1 + arg2;
   } else if (op == '-') {
     return arg1 - arg2;
+  } else if (op == '*') {
+      return arg1 * arg2;
   } else {
     throw new Error("invalid op: '" + op + "'");
   }

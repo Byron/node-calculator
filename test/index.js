@@ -20,6 +20,11 @@ describe('unit', function() {
       done();
     });
     
+    it('should multiply two numbers if op is *', function(done) {
+      expect(calculate(2, '*', 9)).to.equal(18);
+      done();
+    })
+    
     it("should throw if op is unknown", function (done) {
       var msg = "invalid";
       expect(function() {calculate(2, 'l', 1);}).to.throw(msg);
